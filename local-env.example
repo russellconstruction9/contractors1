@@ -1,0 +1,14 @@
+# Local Development Environment Variables
+# Copy this to .env.local for local development
+
+# Gemini AI API Key
+VITE_GEMINI_API_KEY=AIzaSyA_LslfB_7FdSJixz3mrtnnrwb0yi87vh8
+
+# Google Maps API Key (you'll need to get this from Google Cloud Console)
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+
+# Backend API URL (update when you deploy your backend)
+VITE_API_URL=http://localhost:3001/api
+
+# For production, update VITE_API_URL to your deployed backend URL
+# VITE_API_URL=https://your-backend-url.railway.app/api
