@@ -23,12 +23,14 @@ export default defineConfig(({ mode }) => {
       build: {
         outDir: 'dist',
         sourcemap: false,
+        chunkSizeWarningLimit: 1000, // Increase limit to 1MB
         rollupOptions: {
           output: {
             manualChunks: {
               vendor: ['react', 'react-dom'],
               router: ['react-router-dom'],
               utils: ['date-fns'],
+              ai: ['@google/genai'], // Separate AI library into its own chunk
             }
           }
         }
