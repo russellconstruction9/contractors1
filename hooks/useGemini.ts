@@ -3,7 +3,7 @@ import { GoogleGenAI, FunctionDeclaration, Type, GenerateContentResponse, Chat a
 import { useData } from './useDataContext';
 import { Chat, ProjectType, TaskStatus, User } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 const functionDeclarations: FunctionDeclaration[] = [
     // Project Management

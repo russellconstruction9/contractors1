@@ -3,7 +3,7 @@ import { Project, Task, User, TimeLog, TaskStatus, Location, PunchListItem, Proj
 import { setPhoto, getPhoto } from '../utils/db';
 import { addDays, subDays } from 'date-fns';
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyAyS8VmIL-AbFnpm_xmuKZ-XG8AmSA03AM'; // TODO: Move to environment variables
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyAyS8VmIL-AbFnpm_xmuKZ-XG8AmSA03AM';
 
 // Helper function to revive dates from JSON strings
 const reviver = (key: string, value: any) => {

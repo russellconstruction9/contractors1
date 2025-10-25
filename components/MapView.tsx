@@ -8,7 +8,7 @@ interface ProjectLocation {
     lng: number;
 }
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyAyS8VmIL-AbFnpm_xmuKZ-XG8AmSA03AM'; // TODO: Move to environment variables
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyAyS8VmIL-AbFnpm_xmuKZ-XG8AmSA03AM';
 
 const MapView: React.FC = () => {
     const { projects } = useData();
